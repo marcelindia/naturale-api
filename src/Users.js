@@ -25,13 +25,13 @@ exports.getUser = (req, res) => {
     .catch((err) => res.status(500).send(err));
 };
 
-// exports.getUserById = (req, res) => {
-//   const db = connectDb();
-//   db.collection("users")
-//     .get()
-//     .then((snapshot) => {})
-//     .catch((err) => res.status(500).send(err));
-// };
+exports.getUserById = (req, res) => {
+  const db = connectDb();
+  db.collection("users")
+    .get()
+    .then((snapshot) => {})
+    .catch((err) => res.status(500).send(err));
+};
 
 exports.updateUser = (req, res) => {
   user.id = doc.id;
